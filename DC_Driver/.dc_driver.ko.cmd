@@ -1,0 +1,1 @@
+cmd_/home/jaehwan/Project/DC_Driver/dc_driver.ko := ld -r -EL --build-id=sha1  -T scripts/module.lds -o /home/jaehwan/Project/DC_Driver/dc_driver.ko /home/jaehwan/Project/DC_Driver/dc_driver.o /home/jaehwan/Project/DC_Driver/dc_driver.mod.o;  true

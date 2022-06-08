@@ -1,0 +1,1 @@
+cmd_/home/jaehwan/Project/FND_Driver/UpDownFnd/updownfnd_driver.ko := ld -r -EL --build-id=sha1  -T scripts/module.lds -o /home/jaehwan/Project/FND_Driver/UpDownFnd/updownfnd_driver.ko /home/jaehwan/Project/FND_Driver/UpDownFnd/updownfnd_driver.o /home/jaehwan/Project/FND_Driver/UpDownFnd/updownfnd_driver.mod.o;  true

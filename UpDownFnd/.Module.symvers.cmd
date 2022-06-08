@@ -1,0 +1,1 @@
+cmd_/home/jaehwan/Project/UpDownFnd/Module.symvers := sed 's/\.ko$$/\.o/' /home/jaehwan/Project/UpDownFnd/modules.order | scripts/mod/modpost -m -a  -o /home/jaehwan/Project/UpDownFnd/Module.symvers -e -i Module.symvers   -T -

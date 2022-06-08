@@ -1,0 +1,1 @@
+cmd_/home/jaehwan/Project/SERVO_Driver/servo_driver.ko := ld -r -EL --build-id=sha1  -T scripts/module.lds -o /home/jaehwan/Project/SERVO_Driver/servo_driver.ko /home/jaehwan/Project/SERVO_Driver/servo_driver.o /home/jaehwan/Project/SERVO_Driver/servo_driver.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_/home/jaehwan/Project/LED_Driver/Module.symvers := sed 's/\.ko$$/\.o/' /home/jaehwan/Project/LED_Driver/modules.order | scripts/mod/modpost -m -a  -o /home/jaehwan/Project/LED_Driver/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <linux/kdev_t.h>
+
+#define SERVO_FILE_NAME    "/dev/servo_driver"
+
+int main(int argc, char **argv) {
+    int servo_fd;
+    char data;
+    int i;
+
+    servo_fd = open(SERVO_FILE_NAME, O_RDWR);
+    if (servo_fd < 0) {
+        fprintf(stderr, "Can't open %s\n", SERVO_FILE_NAME);
+        return -1;
+    }
+
+
+    while (1) {
+        //for (i = 0; i <= 50; i++) { // 시계 반대 방향
+        //    data = '1';
+        //    write(servo_fd, &data, sizeof(char));
+        //    usleep(1470);
+        //    data = '0';
+        //    write(servo_fd, &data, sizeof(char));
+        //    usleep(20000 - 1470);
+        //}
+        for (i = 0; i <= 50; i++) { // 시계 방향
+            data = '1';
+            write(servo_fd, &data, sizeof(char));
+            usleep(1100);
+            data = '0';
+            write(servo_fd, &data, sizeof(char));
+            usleep(20000 - 1100);
+        }
+    }
+
+
+    /*for (i = 1500; i <= 2000; i++) { // 시계 반대 방향
+        printf("%d\n", i);
+        data = '1';
+        write(servo_fd, &data, sizeof(char));
+        usleep(i);
+        data = '0';
+        write(servo_fd, &data, sizeof(char));
+        usleep(20000 - i);
+        //usleep(200000);
+    }
+    for (i = 1500; i >= 1000; i--) { // 시계 반대 방향
+        printf("%d\n", i);
+        data = '1';
+        write(servo_fd, &data, sizeof(char));
+        usleep(i);
+        data = '0';
+        write(servo_fd, &data, sizeof(char));
+        usleep(20000 - i);
+        //usleep(200000);
+    }
+     */
+
+    close(servo_fd);
+    return 0;
+}
